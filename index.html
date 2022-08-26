@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/zui/1.10.0/css/zui.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zui/1.10.0/lib/jquery/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zui/1.10.0/js/zui.min.js"></script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        html,body{
+            height: 100%;
+        }
+        #bg{
+            background-image: url('./bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: grid;
+            grid-template-rows: 100px 1fr;
+            height: 100%;
+        }
+        #top-bar{
+            background-color: black;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            height: 100px;
+            box-shadow: 0px 10px 50px rgba(199, 168, 168, 0.7);
+        }
+        #title{
+            color: white;
+            text-align: center;
+            font-weight: bolder ;
+            display: grid;
+            grid-template-rows: 70px 30px;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        #main{
+            font-size:40px;
+            line-height:70px;
+        }
+        #sub{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        #content-wrapper{
+            display: grid;
+            grid-template-columns: 200px 1000px 1fr;
+        }
+        #content{
+            height: 775px;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: scroll;
+            margin-top: 5px;
+            border-radius: 10px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        #right-nav{
+            margin:5px;
+            height: 200px; 
+            display: grid;
+            grid-template-rows: repeat(4,1fr);
+            border-radius: 10px;
+            grid-gap: 5px;
+            
+        }
+        .select{
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            font-weight: bolder;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+        }
+        .select:hover{
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            font-weight: bolder;
+            color: black;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+        }
+        #myNiceCarousel{
+            margin: 10px;
+        }
+        img{
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        #goals,#pratice-process,#achivements,#some-files{
+            color: white;
+            display: grid;
+            padding: 10px;
+        }
+        h1{
+            font-size: 40px;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <div id="top-bar">
+            <div id="title"><div id="main">HCI GROUP WORK</div><div id="sub">TonyPi Navagation</div></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>      
+        <div id="content-wrapper">
+            <div id="content">
+                <div id="goals">
+                    <blockquote><h1>Goals</h1></blockquote>
+                </div>
+                <div id="pratice-process">
+                    <blockquote><h1>Practice Process</h1></blockquote>
+                </div>
+                <div id="myNiceCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- 圆点指示器 -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myNiceCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myNiceCarousel" data-slide-to="1"></li>
+                      <li data-target="#myNiceCarousel" data-slide-to="2"></li>
+                    </ol>
+                  
+                    <!-- 轮播项目 -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img alt="First slide" src="./1.jpg">
+                        <div class="carousel-caption">
+                          <!-- <h3>我是第一张幻灯片</h3>
+                          <p>:)</p> -->
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img alt="Second slide" src="./2.jpg">
+                        <div class="carousel-caption">
+                          <!-- <h3>我是第二张幻灯片</h3>
+                          <p>0.0</p> -->
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img alt="Third slide" src="./3.jpg">
+                        <div class="carousel-caption">
+                          <!-- <h3>我是第三张幻灯片</h3>
+                          <p>最后一张咯~</p> -->
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- 项目切换按钮 -->
+                    <a class="left carousel-control" href="#myNiceCarousel" data-slide="prev">
+                      <span class="icon icon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#myNiceCarousel" data-slide="next">
+                      <span class="icon icon-chevron-right"></span>
+                    </a>
+                </div>
+                
+                <div id="achivements">
+                    <blockquote><h1>Achievements</h1></blockquote>
+                </div>
+                <div id="some-files">
+                    <blockquote><h1>Some Files</h1></blockquote>
+                </div>
+            </div>  
+            <div id="right-nav">
+                <a style="text-decoration: none;color: white;" href="#goals"><div class="select">Goals</div></a>
+                <a style="text-decoration: none;color: white;" href="#pratice-process"><div class="select">Practice Process</div></a>
+                <a style="text-decoration: none;color: white;" href="#achivements"><div class="select">Our Achievements</div></a>
+                <a style="text-decoration: none;color: white;" href="#some-files"><div class="select">Some Files</div></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.carousel').carousel()
+    </script>
+</body>
+</html>
