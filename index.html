@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HCI GROUP WORK</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/zui/1.10.0/css/zui.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/zui/1.10.0/lib/jquery/jquery.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/zui/1.10.0/js/zui.min.js"></script>
@@ -17,7 +17,7 @@
             height: 100%;
         }
         #bg{
-            background-image: url('./bg.jpg');
+            background-image: url('./src/img/bg.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -90,9 +90,6 @@
             line-height: 50px;
             font-size: 20px;
         }
-        #myNiceCarousel{
-            margin: 10px;
-        }
         img{
             border-radius: 10px;
         }
@@ -107,8 +104,32 @@
         h1{
             font-size: 40px;
         }
+        #goals .content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 10px;
+        }
+        #goals .content p{
+            font-size: 15px;
+            line-height: 30px;
+        }
+        #goals .content .img{
+            border-radius: 10px;
+            background-image: url('./src/img/goals.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin-left: 10px;
+        }
+        #pratice-process .content{
+            padding: 10px;
+        }
+        #pratice-process video{
+            border-radius: 10px;
 
-    
+        }
+        #some-files .content{
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -123,57 +144,110 @@
             <div id="content">
                 <div id="goals">
                     <blockquote><h1>Goals</h1></blockquote>
+                    <div class="content">
+                        <div>
+                            <h2>&nbsp;&nbsp;The use of tags to achieve intersection steering:</h2>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;We plan to use the tag recognition function of TonyPi, which can automatically identify the corresponding tag and make a left or right turn. In this way, we only need to label the left or right turn at the intersection.
+                            </p> 
+                            <h2>&nbsp;&nbsp;Promblems:</h2>
+                            <ol>
+                                <li><p>TonyPi often recognize the label in advance, how to make TonyPi complete the left or right turn at the right time?</p>
+                                </li>
+                                <li><p>The TonyPi often has trouble walking in a straight line, causing it to hit a wall or the tag to be out of the camera's view</p></li>
+                                <li><p>TonyPi provides a tutorial for changing the action corresponding to the tag, which is easier to implement</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="img">
+
+                        </div>
+                        
+                    </div>
                 </div>
                 <div id="pratice-process">
                     <blockquote><h1>Practice Process</h1></blockquote>
-                </div>
-                <div id="myNiceCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- 圆点指示器 -->
-                    <ol class="carousel-indicators">
-                      <li data-target="#myNiceCarousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#myNiceCarousel" data-slide-to="1"></li>
-                      <li data-target="#myNiceCarousel" data-slide-to="2"></li>
-                    </ol>
-                  
-                    <!-- 轮播项目 -->
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img alt="First slide" src="./1.jpg">
-                        <div class="carousel-caption">
-                          <!-- <h3>我是第一张幻灯片</h3>
-                          <p>:)</p> -->
+                    <div class="content">
+                        <h2>&nbsp;&nbsp;Some Pictures:</h2>
+                        <div id="myNiceCarousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                            <li data-target="#myNiceCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myNiceCarousel" data-slide-to="1"></li>
+                            <li data-target="#myNiceCarousel" data-slide-to="2"></li>
+                            <li data-target="#myNiceCarousel" data-slide-to="3"></li>
+                            <li data-target="#myNiceCarousel" data-slide-to="4"></li>
+                            </ol>
+                        
+                            <div class="carousel-inner">
+                            <div class="item active">
+                                <img alt="First slide" src="./src/img/1.jpg">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img alt="Second slide" src="./src/img/2.jpg">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img alt="Third slide" src="./src/img/3.jpg">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img alt="Fourth slide" src="./src/img/4.jpg">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img alt="Fifth slide" src="./src/img/5.jpg">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            </div>
+                        
+                            <a class="left carousel-control" href="#myNiceCarousel" data-slide="prev">
+                            <span class="icon icon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#myNiceCarousel" data-slide="next">
+                            <span class="icon icon-chevron-right"></span>
+                            </a>
                         </div>
-                      </div>
-                      <div class="item">
-                        <img alt="Second slide" src="./2.jpg">
-                        <div class="carousel-caption">
-                          <!-- <h3>我是第二张幻灯片</h3>
-                          <p>0.0</p> -->
-                        </div>
-                      </div>
-                      <div class="item">
-                        <img alt="Third slide" src="./3.jpg">
-                        <div class="carousel-caption">
-                          <!-- <h3>我是第三张幻灯片</h3>
-                          <p>最后一张咯~</p> -->
-                        </div>
-                      </div>
+                        <h2>&nbsp;&nbsp;Fall and Stand:</h2>
+                        <video controls>
+                            <source src="./src/video/fallstand.mp4">
+                        </video>   
+                        
+                        <h2>&nbsp;&nbsp;Orientation Correction</h2>  
+                        <video controls>
+                            <source src="./src/video/direction.mp4">
+                        </video>  
+                        <h2>&nbsp;&nbsp;Success Test #1</h2>  
+                        <video controls>
+                            <source src="./src/video/success1.mp4">
+                        </video>       
+                        <h2>&nbsp;&nbsp;Fail Try #1</h2>  
+                        <video controls>
+                            <source src="./src/video/fail1.mp4">
+                        </video>  
+                        <h2>&nbsp;&nbsp;Fail Try #2</h2>
+                        <video controls>
+                            <source src="./src/video/fail2.mp4">
+                        </video>               
                     </div>
-                  
-                    <!-- 项目切换按钮 -->
-                    <a class="left carousel-control" href="#myNiceCarousel" data-slide="prev">
-                      <span class="icon icon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#myNiceCarousel" data-slide="next">
-                      <span class="icon icon-chevron-right"></span>
-                    </a>
                 </div>
+
                 
                 <div id="achivements">
                     <blockquote><h1>Achievements</h1></blockquote>
                 </div>
                 <div id="some-files">
                     <blockquote><h1>Some Files</h1></blockquote>
+                    <div class="content">
+                        <ul>
+                            <li><a href="./new.py" style="text-decoration: none;color: white;font-size: 25px;">test.py</a></li>
+                        </ul>
+                        
+                    </div>
                 </div>
             </div>  
             <div id="right-nav">
